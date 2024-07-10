@@ -1,0 +1,105 @@
+.pl{
+    margin-left : 20px;
+}
+.display-2{
+    font-size: 5rem;
+    background-color: rgba(32, 40, 151, 0.804);
+
+}
+.bg{
+    background-color :aliceblue;
+}
+nav{
+    background-color: #4149A2;
+}
+.bgg{
+    background-color: #4149A2;
+}
+.fix{
+    height : 250px;
+    width : 370px;
+
+}
+.breadcrumb-item + .breadcrumb-item::before{
+    content : ">";
+}
+.bgnew{
+    height : 100vh;
+}
+.hg{
+    height : 75vh;
+}
+.pad{
+    margin-bottom: 0px;
+}
+.card-fix{
+    height : 200px;
+    width : 200px;
+}
+.image{
+    width : 390px;
+    margin-left: -29px;
+}
+.text{
+    margin-top: -19px;
+}.contactbg{
+    background: url(./images/contactbg.jpeg);
+}
+.fixing{
+    margin : 14px;
+    width : 22rem;
+    opacity: .88;
+}
+.aboutbg{
+    margin-top: -24px;
+    height : 50vh;
+    background-image: cover;
+    background: url(./images/aboutbg3.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.aboutp{
+    background-color: white;
+    opacity: .85;
+}
+.aboutmar{
+    padding : 10px;
+}
+.form-control{
+    margin-top : 7px;
+    margin-bottom: 7px;
+}
+.contactcard{
+    margin-top: 16px;;
+    background-color: #182A47;
+    color : white;
+}
+.map{
+    margin-left: 5px;
+    margin-top: 15px;
+    height : 300px;
+}
+.appointbg{
+    margin-top : 0px;
+    background: url("./images/appointbg2.jpg");
+    
+    
+}
+.appoint-input{
+    background-color: aliceblue;
+}
+.appoint-head{
+    color :#4149A2;
+}
+footer{
+    background-color: #4149A2;
+    color : white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.foot-m{
+    margin-left : 600px;
+}
+.foot{
+    font-size:small;
+}

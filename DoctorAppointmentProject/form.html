@@ -1,0 +1,144 @@
+<!-- <?php
+session_start();
+include("db.php");
+if($_SERVER['REQUEST_METHOD']=="POST" )
+{
+    if(isset($_POST["signin"])){
+    $username = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    if(!empty($email)&& !empty($password)&& !is_numeric($email))
+    {
+        $query = "insert into signin(name,username,password) values('$username','$email','$password')";
+        mysqli_query($con, $query);
+
+        echo "<script type='text/javascript'> alert('Registered Successfully!')</script>";
+    }
+    else{
+        echo "<script type='text/javascript'> alert('Please enter valid credentials!')</script>";
+    }
+
+    }
+    // if(isset($_POST["login"])){
+
+    //     $login_mail = mysqli_real_escape_string($con,$_POST['lemail']);
+    //     $login_password = mysqli_real_escape_string($con,$_POST['lpassword']);
+        // $result = mysqli_query($con,"SELECT * FROM signin WHERE username='$login_mail'AND password='$login_password'");
+        // $row = mysqli_fetch_assoc($result);
+        // if(is_array($row) && !empty($row)){
+        //     if($row['password']==$login_password)
+        //                 {
+        //                     header("locaction :index.php");
+        //                     die;
+        //                 }
+        // }
+            
+    //             if(!empty($login_mail)&& !empty($login_password)&& !is_numeric($login_mail))
+    //             {
+    //                 $query = "select * from signin where username = '$login_mail' limit 1 ";
+    //                 $result = mysqli_query($con, $query); 
+    //                 if($result){
+    //                     if($result && mysqli_num_rows($result)>0)
+    //                     {
+    //                     $user_data = mysqli_fetch_assoc($result);
+    //                     if($user_data['password']==$login_password)
+    //                     {
+    //                         header("locaction :index.php");
+    //                         die;
+    //                     }
+    //                     }
+
+    //                 }    
+                    
+    //                 echo "<script type='text/javascript'> alert('Enter correct password or email')</script>";
+            
+    //             }
+    //             else{
+    //                 echo "<script type='text/javascript'> alert('Enter correct password or email')</script>";
+    //             }
+                
+
+    // }
+    
+}
+?> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <title>Medico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container signup-container">
+            <form  method="POST" action="signin.php" >
+                
+                <h2>Create Your Account</h2>
+                <div class="social-media">
+                    <a href="#" class="icons"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="icons"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icons"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <p>Or Create using Email!</p>
+                <input type="text" name="name"  placeholder="Name" required>
+                
+                <input type="email" name="email"placeholder="Email" required>
+               
+                <input type="password" name="password"  placeholder="Password" required>
+                
+                <input type="password" name="cpassword"placeholder="Confirm Password" required>
+                
+                <button type="submit" name="signin">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container login-container">
+            <form method = "POST" action="login.php">
+                <h2>Login</h2>
+                <div class="social-media">
+                    <a href="#" class="icons"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="icons"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icons"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <p>or <br>Login using Email!</p>
+                <input type="email" name="lemail" placeholder="Email" required>
+                
+                <input type="password" name="lpassword" placeholder="Password" required>
+                
+                <button type="submit" >Login</button>
+            </form>
+        </div>
+        <div class="overlap-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>MEDICO</h1>
+                    
+                    <h4>Existing user to Medico?</h4>
+                    <p>Click login to get started!</p>
+                    <button class="btn" id="login">Login</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>MEDICO</h1>
+                    <h4>Wanna join with us?</h4>
+                    <p>Click sign up to create your account!</p>
+                    <button class="btn" id="signup">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="form.js"></script>
+</body>
+
+</html>

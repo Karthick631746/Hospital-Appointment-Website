@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <div class="container">
+        <a href="./index.php" class="navbar-brand ">
+            <img src="./logo.png" width="40" height="40">
+            MEDICO</a>
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item "><a href="./index.php" class="nav-link ">Home</a></li>
+                <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="./contact.html" class="nav-link">Contact us</a></li>
+            </ul>
+            
+        </div>
+        </div>
+    </nav>
+<div class="card appointbg mt=0">
+        
+    <div class="card-body mt-3">
+        <h1 class="appoint-head">REGISTER HERE!</h1>
+        <div class="mt-3">
+            <form action="appointment.php" method="POST">
+                <div class="row mt-3">
+                    <div class="col-3 mx-2">
+                        <div class="form-group">
+                            <label for="firstname">Firstname</label>
+                            <input type="text" class="form-control appoint-input" name="firstname" id="firstname" placeholder="Firstname">
+                        </div>
+                    </div>
+                    <div class="col-3 mx-0">
+                        <div class="form-group">
+                            <label for="lastname" >Lastname</label>
+                            <input type="text" class="form-control appoint-input" name="lastname" id="lastname" placeholder="Lastname">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-3 mx-2">
+                        <div class="form-group">
+                            <label for="dob">DOB</label>
+                            <input type="date" class="form-control appoint-input" name="dob" id="dob" placeholder="DOB">
+                        </div>
+                    </div>
+                    <div class="col-3 mx-0">
+                        <div class="form-group">
+                            <label for="age" >Age</label>
+                            <input type="number" class="form-control appoint-input" name="age" id="age" placeholder="Age">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-3 mx-2">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control appoint-input" name="email" id="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="col-3 mx-0">
+                        <div class="form-group">
+                            <label for="phno" >PhoneNo</label>
+                            <input type="number" class="form-control appoint-input" name="phno" id="phno" placeholder="Phone No">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-6 mx-2">
+                        <div class="form-group">
+                            <label for="doa">Date Of Appointment</label>
+                            <input type="date" class="form-control appoint-input" name="doa" id="doa" placeholder="DOA">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-6 mx-2">
+                        <div class="form-group">
+                            <label for="time">Timing</label>
+                            <input type="time" class="form-control appoint-input" name="time" id="time" placeholder="Time">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-6 mx-2">
+                        <div class="form-group">
+                            <label for="doctor">Consulting Physician</label>
+                            <select name="doctor" id="doctor" class="form-control appoint-input">
+                                <option value="">--Select--</option>
+                                <option value="Steve James">Steve James</option>
+                                <option value="Stella Mariam">Stella Mariam</option>
+                                <option value="Michael Chris">Michael Chris</option>
+                                <option value="Harris Joe">Harris Joe</option>
+                                <option value="Lisa Raphael">Lisa Raphael</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-6 mx-2">
+                        <div class="form-group">
+                            <button class="form-control btn btn-primary" name="register">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
